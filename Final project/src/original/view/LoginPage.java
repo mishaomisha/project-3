@@ -65,9 +65,34 @@ public class LoginPage extends TabPane {
         boxsighnin.setMaxHeight(50);
         boxsighnin.setSpacing(20);
         Tab Sighnin = new Tab("Sighn in", boxsighnin);
+        
 
         this.getTabs().add(login);
         this.getTabs().add(Sighnin);
 
     }
 }
+ public TextField getEntered_Username() {
+        return entered_Username;
+    }
+
+    public PasswordField getEntered_password() {
+        return entered_password;
+    }
+
+    public Button getEnter_login() {
+        return enter_login;
+    }
+
+    public Button getEnter_sighnin() {
+        return enter_sighnin;
+    }
+
+
+
+
+
+
+
+
+
