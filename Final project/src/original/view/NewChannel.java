@@ -9,7 +9,7 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
-public abstract class NewChannel extends Application {
+public abstract class NewChannel extends VBox {
     private ArrayList<Button> choose = new ArrayList<Button>();
     private TextField name = new TextField();
     public NewChannel(){
@@ -30,8 +30,9 @@ public abstract class NewChannel extends Application {
         listView.setItems(data);
         StackPane root = new StackPane();
         root.getChildren().add(listView);
-        VBox newChannel = new VBox(channelName, getName(),listPeopleChannel,root);
-        newChannel.setSpacing(10);
+        this.getChildren().addAll(channelName, getName(),listPeopleChannel,root);
+        this.setSpacing(10);
+        this.setMaxWidth(300);
     }
 
     public ArrayList<Button> getChoose() {
